@@ -21,6 +21,12 @@
 			<ContextMenu name="СломанКонтекстноеМеню" id="16"/>
 			<ExtendedTooltip name="СломанРасширеннаяПодсказка" id="17"/>
 		</CheckBoxField>
+		<CheckBoxField name="ОграничениеПоВозрасту" id="18">
+			<DataPath>Объект.ОграничениеПоВозрасту</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОграничениеПоВозрастуКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ОграничениеПоВозрастуРасширеннаяПодсказка" id="20"/>
+		</CheckBoxField>
 		<InputField name="Наименование" id="4">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
