@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Клиент" id="13">
+			<DataPath>Объект.Клиент</DataPath>
+			<ContextMenu name="КлиентКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="ПозицииПродажи" id="28">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<DataPath>Объект.ПозицииПродажи</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПозицииПродажиКонтекстноеМеню" id="30"/>
+			<AutoCommandBar name="ПозицииПродажиКоманднаяПанель" id="29"/>
+			<ExtendedTooltip name="ПозицииПродажиРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ПозицииПродажиСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ПозицииПродажи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПозицииПродажиСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ПозицииПродажиСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПозицииПродажиСостояниеПросмотра" id="38">
+				<AdditionSource>
+					<Item>ПозицииПродажи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПозицииПродажиСостояниеПросмотраКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ПозицииПродажиСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПозицииПродажиУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>ПозицииПродажи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПозицииПродажиУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ПозицииПродажиУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ПозицииПродажиПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ПозицииПродажиНомерСтроки" id="41">
+					<DataPath>Объект.ПозицииПродажи.LineNumber</DataPath>
+					<ContextMenu name="ПозицииПродажиНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПозицииПродажиНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПозицииПродажиНоменклатура" id="44">
+					<DataPath>Объект.ПозицииПродажи.Номенклатура</DataPath>
+					<ContextMenu name="ПозицииПродажиНоменклатураКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПозицииПродажиНоменклатураРасширеннаяПодсказка" id="46"/>
+					<Events>
+						<Event name="OnChange">ПозицииПродажиНоменклатураПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПозицииПродажиЦена" id="47">
+					<DataPath>Объект.ПозицииПродажи.Цена</DataPath>
+					<ContextMenu name="ПозицииПродажиЦенаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПозицииПродажиЦенаРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ПозицииПродажиЦенаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПозицииПродажиКоличество" id="50">
+					<DataPath>Объект.ПозицииПродажи.Количество</DataPath>
+					<ContextMenu name="ПозицииПродажиКоличествоКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПозицииПродажиКоличествоРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ПозицииПродажиКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПозицииПродажиСумма" id="53">
+					<DataPath>Объект.ПозицииПродажи.Сумма</DataPath>
+					<FooterDataPath>Объект.ПозицииПродажи.TotalСумма</FooterDataPath>
+					<ContextMenu name="ПозицииПродажиСуммаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПозицииПродажиСуммаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаБаллыСумма" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБаллыСуммаРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="Скидка" id="19">
+					<DataPath>Объект.БаллыКСписанию</DataPath>
+					<ContextMenu name="СкидкаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">СкидкаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппСумма" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа1</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>web:Gainsboro</BackColor>
+					<ExtendedTooltip name="ГруппСуммаРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<InputField name="СуммаДокумента" id="10">
+							<DataPath>Объект.СуммаДокумента</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">СуммаДокументаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="59">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="61"/>
+		</InputField>
+		<InputField name="Комменатрий" id="56">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомменатрийКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="КомменатрийРасширеннаяПодсказка" id="58"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПродажаБилета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
