@@ -4,13 +4,13 @@ pipeline {
     }
     post {
         always {
-
+            bat "echo always"
         }
         failure {
-
+            bat "echo failure"
         }
         success {
-
+             bat "echo success"
         }
     }
     stages {
