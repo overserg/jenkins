@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                bat "chcp 65001\n vrunner init-dev --v8version 8.3.27.1964 --dt C:\\1c\\dt\\20250511_2103.dt --src C:\\doker_shared_data\\repo\\jenkins\\src\\cf --db-user Администратор --db-pwd 1215"
+                bat "chcp 65001\n vrunner init-dev --v8version 8.3.27.1964 --ibconnection /FC:\\doker_shared_data\\repo\\jenkins\\build\\ib --dt C:\\1c\\dt\\20250511_2103.dt --src C:\\doker_shared_data\\repo\\jenkins\\src\\cf --db-user Администратор --db-pwd 1215"
                 // bat "echo Hello world!"
             }
         }
